@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="openModalBtnTask">Add Task</button>
+        <div id="modal-task" class="modal hidden">
+            <form id="taskForm">
+              <label>
+                Title:
+                <input type="text" id="taskTitle" required />
+              </label>
+              <label>
+                Project:
+                <select id="taskProject">
+                </select>
+              </label>
+              <label>
+                Due Date:
+                <input type="date" id="taskDate" required />
+                <div class="time-toggle">
+                    <button type="button" id="allDayBtn" class="active">All Day</button>
+                    <button type="button" id="customTimeBtn">Custom Time</button>
+                    <input type="time" id="taskTime" style="display: none;" />
+                </div>
+            
+              </label>
+              <label>
+                Priority:
+                <select id="taskPriority">
+                  <option value="0">None</option>
+                  <option value="1">Low</option>
+                  <option value="2">Medium</option>
+                  <option value="3">High</option>
+                </select>
+              </label>
+              <div class="btnContainer">
+                <button type="submit" class="finalTaskBtn">Add</button>
+                <button type="button" id="closeModalBtnTask" class="finalBtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+        <button id="openModalBtnProj">Add Project</button>
+        <div id="modal-project" class="modal hidden">
+            <form id="projForm">
+              <label>
+                Name:
+              <input type="text" id="projName" required />
+              <div class="btnContainer">
+                <button type="submit" class="finalBtn">Add</button>
+                <button type="button" id="closeModalBtnProj" class="finalBtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+    </div>
+    <div id="content">
+        <!-- stuff -->
+    </div>
+</body>
+</html>
